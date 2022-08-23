@@ -16,7 +16,7 @@ const variants = {
 }
 
 const Overlay = () => (
-  <div className="fixed inset-0 bg-black bg-opacity-60"></div>
+  <div className="fixed inset-0 bg-black bg-opacity-60 z-0"></div>
 )
 
 const BurgerMenu = () => {

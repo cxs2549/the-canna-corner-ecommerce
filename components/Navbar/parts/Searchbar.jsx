@@ -12,7 +12,7 @@ const variants = {
 const Searchbar = () => {
   const [focused, setFocused] = useState(false)
   return (
-    <div className="relative w-full sm:max-w-[340px] mx-auto flex-1  xl:max-w-full xl:w-6/12 Search:mr-0 overflow-x-hidden">
+    <div className="relative w-full sm:max-w-[340px] mx-auto flex-1 -translate-x-4 xl:translate-x-0 Search:mr-0 overflow-x-hidden">
       <div className="overflow-hidden w-full z-0 rounded-full relative p-2.5 bg-green-300">
         <div className="relative z-50 dark:bg-surface rounded-full w-full md:flex">
           <input
@@ -20,7 +20,7 @@ const Searchbar = () => {
             onBlur={() => setFocused(false)}
             type="text"
             placeholder="Search strains, moods, devices..."
-            className="rounded-full px-4 w-full text-gray-700 focus:outline-none py-1.5 text-[15px] dark:text-white dark:bg-surface  md:flex-1"
+            className="rounded-full px-4 w-full bg-white text-gray-700 focus:outline-none py-1.5 text-[15px] dark:text-white dark:bg-surface  md:flex-1"
           />
           <Btn classes="active grid place-items-center ml-auto absolute shadow -right-1 -top-0.5 px-4 md:px-6">
             <TbSearch size={24} />

@@ -1,6 +1,7 @@
 import Link from "next/link"
 import { CategoriesProvider } from "../context/categories"
 import commerce from "../lib/commerce"
+import { signOut, useSession } from "next-auth/react"
 
 export async function getStaticProps() {
   const { data: categories } = await commerce.categories.list()
@@ -14,9 +15,16 @@ export async function getStaticProps() {
 }
 
 const Homepage = ({ Container, Page, categories }) => {
+  const { data: session } = useSession()
   return (
-    <Container>
+    <Container classes="relative">
       <Page title="Shop">
+        {session && (
+          <div className="absolute right-5">
+            Hey, {session.user.name.split(' ')[0]}{" "}
+            <span className="cursor-pointer" onClick={() => signOut()}>(Sign out)</span>
+          </div>
+        )}
         {/* <ul className="ml-8 flex flex-col-reverse gap-2">
           {categories.map((cat) => (
             <li className="cursor-pointer">
@@ -31,13 +39,14 @@ const Homepage = ({ Container, Page, categories }) => {
 }
 export default Homepage
 
-
-
 function Example() {
   return (
     <div className="bg-white dark:bg-indigo-600 md:grid grid-cols-2  shadow overflow-hidden sm:rounded-lg rounded-xl">
       <Link href={`/categories/flower`}>
-        <div id="flowerHero" className="relative z-10 px-4 py-5 sm:px-6 cursor-pointer">
+        <div
+          id="flowerHero"
+          className="relative z-10 px-4 py-5 sm:px-6 cursor-pointer"
+        >
           <h2 className=" leading-6 font-medium text-gray-600 dark:text-white">
             Flower
           </h2>
@@ -49,7 +58,7 @@ function Example() {
           </div>
         </div>
       </Link>
-      <div className="">
+      <div>
         <dl>
           <Link href={`/categories/concentrates`}>
             <div className="cursor-pointer flex flex-col bg-gray-50 dark:bg-surface2 dark:text-white px-4 py-5 sm:px-6">
