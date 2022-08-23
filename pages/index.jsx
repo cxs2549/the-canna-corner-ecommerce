@@ -49,7 +49,7 @@ function Example() {
           </div>
         </div>
       </Link>
-      <div className="">
+      <div>
         <dl>
           <Link href={`/categories/concentrates`}>
             <div className="cursor-pointer flex flex-col bg-gray-50 dark:bg-surface2 dark:text-white px-4 py-5 sm:px-6">
