@@ -17,12 +17,12 @@ export async function getStaticProps() {
 const Homepage = ({ Container, Page, categories }) => {
   const { data: session } = useSession()
   return (
-    <Container>
+    <Container classes="relative">
       <Page title="Shop">
         {session && (
           <div className="absolute right-5">
             Hey, {session.user.name.split(' ')[0]}{" "}
-            <span onClick={() => signOut()}>(Sign out)</span>
+            <span className="cursor-pointer" onClick={() => signOut()}>(Sign out)</span>
           </div>
         )}
         {/* <ul className="ml-8 flex flex-col-reverse gap-2">
