@@ -1,0 +1,38 @@
+{
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@chec/commerce.js": "^2.8.0",
+    "@fontsource/shrikhand": "^4.5.9",
+    "@headlessui/react": "^1.6.6",
+    "@heroicons/react": "^1.0.6",
+    "@reduxjs/toolkit": "^1.8.5",
+    "foundation-sites": "^6.7.5",
+    "framer-motion": "^7.2.0",
+    "next": "latest",
+    "next-auth": "^4.10.3",
+    "open-props": "^1.4.13",
+    "postcss-jit-props": "^1.0.7",
+    "react": "18.1.0",
+    "react-cool-onclickoutside": "^1.7.0",
+    "react-dom": "18.1.0",
+    "react-foundation": "^0.9.2",
+    "react-hook-form": "^7.34.2",
+    "react-icons": "^4.4.0",
+    "react-spinners": "^0.13.4",
+    "sass": "^1.54.4"
+  },
+  "devDependencies": {
+    "@types/node": "17.0.35",
+    "@types/react": "18.0.9",
+    "@types/react-dom": "18.0.5",
+    "autoprefixer": "^10.4.7",
+    "postcss": "^8.4.14",
+    "tailwindcss": "^3.1.2",
+    "typescript": "4.7.2"
+  }
+}
