@@ -24,7 +24,7 @@ const Card = ({ product }) => {
         />
       </div>
       <div className="pb-1  flex flex-col justify-between">
-        <div className="py-1 px-1 flex items-center justify-between">
+        <div className="p-1 flex items-center justify-between">
           <div className="flex flex-col">
             <span className="block">{product.categories[1]?.name}</span>
             <h2 className="pr-2 text-base -translate-y-0.5">{product.name}</h2>

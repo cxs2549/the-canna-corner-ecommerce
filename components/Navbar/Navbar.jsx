@@ -13,7 +13,7 @@ const Navbar = ({ Container }) => {
   const { data: session } = useSession()
   const { data: categories } = useCategoriesState()
   return (
-    <header className="shadow dark:bg-surface dark:text-white">
+    <header className=" dark:bg-surface dark:text-white">
       <Container noMotion classes="flex-col lg:gap-0 relative">
         <div className="flex justify-between w-full">
           <div className="flex justify-center  flex-col w-full md:flex-row Search:gap-4 Search:items-center md:justify-start md:gap-1">
@@ -31,12 +31,17 @@ const Navbar = ({ Container }) => {
             </div>
           )}
 
-          {!session && <div className="md:translate-y-5 md:ml-3">
-            <Btn onklick={signIn} classes="relative grid  w-[129px]">
-              <FcGoogle className=" absolute left-5 top-1/2 -translate-y-1/2" size={30} />
-              <h5 className="block  translate-x-4">Sign in</h5>
-            </Btn>
-          </div>}
+          {!session && (
+            <div className="md:translate-y-5 md:ml-3">
+              <Btn onklick={signIn} classes="relative grid  w-[129px]">
+                <FcGoogle
+                  className=" absolute left-5 top-1/2 -translate-y-1/2"
+                  size={30}
+                />
+                <h5 className="block text-sm  translate-x-4">Sign in</h5>
+              </Btn>
+            </div>
+          )}
         </div>
         <div className="Search:hidden w-full mt-4">
           <Searchbar />
