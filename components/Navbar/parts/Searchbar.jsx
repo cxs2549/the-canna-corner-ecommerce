@@ -12,10 +12,11 @@ const variants = {
 const Searchbar = () => {
   const [focused, setFocused] = useState(false)
   return (
-    <div className="relative w-full sm:max-w-[340px] mx-auto flex-1 md:-translate-x-4  Search:mr-0 overflow-x-hidden">
+    <div className=" relative w-full sm:max-w-[340px] mx-auto flex-1 md:-translate-x-4  Search:mr-0 overflow-x-hidden">
       <div className="overflow-hidden w-full z-0 rounded-full relative p-2.5 bg-green-300">
         <div className="relative z-50 dark:bg-surface rounded-full w-full md:flex">
           <input
+            maximum-scale={1}
             onFocus={() => setFocused(true)}
             onBlur={() => setFocused(false)}
             type="text"

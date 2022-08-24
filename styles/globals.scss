@@ -35,8 +35,8 @@ body {
 
 h1 {
   font-family: "Shrikhand", cursive;
-  @apply tracking-tighter;
   color: inherit;
+  letter-spacing: -3px;
 }
 
 h2 {
@@ -83,4 +83,15 @@ span {
 
 .no-flow {
   overflow: hidden;
+}
+
+#burger {
+  // position: relative;
+  &::after {
+    content: '';
+    position: absolute;
+    @apply inset-0 bg-black opacity-30;
+    z-index: -1;
+    
+  }
 }

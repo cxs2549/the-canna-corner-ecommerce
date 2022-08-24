@@ -51,7 +51,6 @@ const Categories = ({ category, Container }) => {
         </Btn>
         {category.children.map((child, i) => (
           <Btn
-            onklick={() => filterProducts(child.slug)}
             classes={`border dark:border-slate-600 text-slate-300`}
             key={i}
           >
