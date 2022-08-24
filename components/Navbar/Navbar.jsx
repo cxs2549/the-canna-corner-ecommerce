@@ -18,7 +18,7 @@ const Navbar = ({ Container }) => {
         <div className="flex justify-between w-full">
           <div className="flex justify-center  flex-col w-full md:flex-row Search:gap-4 Search:items-center md:justify-start md:gap-1">
             <BurgerMenu categories={categories} />
-            <div className="hidden Search:block flex-1 order-2 lg:mr-3 lg:ml-1">
+            <div className="hidden  flex-1 order-2 lg:mr-3 lg:ml-1">
               <Searchbar />
             </div>
             <Logo />
@@ -43,7 +43,7 @@ const Navbar = ({ Container }) => {
             </div>
           )}
         </div>
-        <div className="Search:hidden w-full mt-4">
+        <div className="hidden w-full mt-4">
           <Searchbar />
         </div>
         <div className="flex items-center justify-between w-full"></div>
