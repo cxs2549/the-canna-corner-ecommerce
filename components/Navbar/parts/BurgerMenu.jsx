@@ -53,7 +53,7 @@ const BurgerMenu = () => {
         id="burger"
         className="fixed min-h-screen top-0 left-0 rounded-xl rounded-l-none bg-blue-300 dark:bg-slate-800  min-w-[60vw] z-10 max-w-[350px]"
       >
-        <div className="pt-2 px-1 relative h-[80px] bg-gradient-to-r from-yellow-200 to-red-300 rounded-r-xl z-50 dark:from-slate-900 dark:to-yellow-400 dark:via-red-800">
+        <div className="pt-2 px-1 relative h-[77px] bg-gradient-to-r from-yellow-200 to-red-300 rounded-r-xl z-50 dark:from-slate-900 dark:to-yellow-400 dark:via-red-800">
           <VscClose
             onClick={() => {
               setIsOpen((isOpen) => !isOpen)
