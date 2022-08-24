@@ -72,7 +72,7 @@ export default function Payment({ shippingData, checkoutToken }) {
     payNow(carddata)
   }
   return (
-    <div className="p-5 max-w-5xl mx-auto flex flex-col pb-24">
+    <div className=" max-w-5xl mx-auto flex flex-col pb-24">
       {order ? (
         <Container animated className="flex flex-col gap-8">
           <h2 className="text-xl">

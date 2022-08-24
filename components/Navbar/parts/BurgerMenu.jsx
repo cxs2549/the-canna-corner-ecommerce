@@ -10,8 +10,8 @@ import { useSession, signOut } from "next-auth/react"
 
 
 const variants = {
-  open: { opacity: 1, x: 0 },
-  closed: { opacity: 0, x: "-100%" },
+  open: { x: 0, opacity: 1 },
+  closed: { opacity: 0.5, x: "-100%" },
   none: { opacity: 0, x: "-100%" },
 }
 
