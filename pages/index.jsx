@@ -19,11 +19,15 @@ const Homepage = ({ Container, Page, categories }) => {
   return (
     <Container classes="relative">
       <Page title="Shop">
-        {session && (
+        {session && session.user.name ? (
           <div className="absolute right-5">
-            Hey, {session.user.name.split(' ')[0]}{" "}
-            <span className="cursor-pointer" onClick={() => signOut()}>(Sign out)</span>
+            Hey, {session && session.user?.name.split(" ")[0]}{" "}
+            <span className="cursor-pointer" onClick={() => signOut()}>
+              (Sign out)
+            </span>
           </div>
+        ) : (
+          <h2></h2>
         )}
         {/* <ul className="ml-8 flex flex-col-reverse gap-2">
           {categories.map((cat) => (
@@ -34,6 +38,7 @@ const Homepage = ({ Container, Page, categories }) => {
         </ul> */}
         <Example />
       </Page>
+      <pre>{JSON.stringify(session, null, 2)}</pre>
     </Container>
   )
 }
