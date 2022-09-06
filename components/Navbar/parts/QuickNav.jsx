@@ -17,7 +17,7 @@ const QuickNav = ({ categories }) => {
             <Btn
               classes={`${
                 router.asPath === "/categories/" + cat.slug && "active"
-              } border dark:border-slate-600 dark:text-slate-400`}
+              } border text-slate-300 dark:border-slate-600 dark:text-slate-400`}
             >
               <p className="text-sm">{cat.name}</p>
             </Btn>
@@ -27,9 +27,9 @@ const QuickNav = ({ categories }) => {
         <Btn
           classes={`${
             router.asPath === "/" && "active"
-          } border dark:border-slate-600 dark:text-slate-400`}
+          } border text-slate-300 dark:border-slate-600 dark:text-slate-400 text-sm`}
         >
-          Home
+          <p className="text-sm">Home</p>
         </Btn>
       </Link>
     </div>

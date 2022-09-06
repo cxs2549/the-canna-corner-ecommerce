@@ -10,8 +10,8 @@ import { useSession, signOut } from "next-auth/react"
 
 
 const variants = {
-  open: { opacity: 1, x: 0 },
-  closed: { opacity: 0, x: "-100%" },
+  open: { x: 0, opacity: 1 },
+  closed: { opacity: 0.5, x: "-100%" },
   none: { opacity: 0, x: "-100%" },
 }
 
@@ -50,9 +50,10 @@ const BurgerMenu = () => {
         initial="none"
         animate={isOpen ? "open" : "closed"}
         variants={variants}
-        className="fixed min-h-screen top-0 left-0 rounded-xl rounded-l-none bg-green-600 dark:bg-slate-800  min-w-[60vw] z-10 max-w-[350px]"
+        id="burger"
+        className="fixed min-h-screen top-0 left-0 rounded-xl rounded-l-none bg-blue-300 dark:bg-slate-800  min-w-[60vw] z-10 max-w-[350px]"
       >
-        <div className="pt-2 px-1 relative h-[80px] bg-gradient-to-r from-yellow-200 to-red-300 rounded-r-xl z-50 dark:from-slate-900 dark:to-yellow-400 dark:via-red-800">
+        <div className="pt-2 px-1 relative h-[77px] bg-gradient-to-r from-yellow-200 to-red-300 rounded-r-xl z-50 dark:from-slate-900 dark:to-yellow-400 dark:via-red-800">
           <VscClose
             onClick={() => {
               setIsOpen((isOpen) => !isOpen)

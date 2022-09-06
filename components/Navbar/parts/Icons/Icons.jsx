@@ -33,7 +33,11 @@ const Icons = () => {
           />
         </div>
       </Link>
-      <Icon shape={<TbUser />} />
+      <Link href={`/account/profile`}>
+        <div>
+          <Icon shape={<TbUser />} />
+        </div>
+      </Link>
       {/* <pre>
         {JSON.stringify(state.subtotal, null, 2)}
       </pre> */}

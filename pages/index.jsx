@@ -19,11 +19,15 @@ const Homepage = ({ Container, Page, categories }) => {
   return (
     <Container classes="relative">
       <Page title="Shop">
-        {session && (
+        {session && session.user.name ? (
           <div className="absolute right-5">
-            Hey, {session.user.name.split(' ')[0]}{" "}
-            <span className="cursor-pointer" onClick={() => signOut()}>(Sign out)</span>
+            Hey, {session && session.user?.name.split(" ")[0]}{" "}
+            <span className="cursor-pointer" onClick={() => signOut()}>
+              (Sign out)
+            </span>
           </div>
+        ) : (
+          <h2></h2>
         )}
         {/* <ul className="ml-8 flex flex-col-reverse gap-2">
           {categories.map((cat) => (
@@ -45,16 +49,16 @@ function Example() {
       <Link href={`/categories/flower`}>
         <div
           id="flowerHero"
-          className="relative z-10 px-4 py-5 sm:px-6 cursor-pointer"
+          className="relative z-10 p-5 cursor-pointer"
         >
           <h2 className=" leading-6 font-medium text-gray-600 dark:text-white">
             Flower
           </h2>
           <div className="flex gap-2">
-            <p className="mt-1 max-w-2xl text-sm ">Sativa</p>
-            <p className="mt-1 max-w-2xl text-sm ">Indica</p>
-            <p className="mt-1 max-w-2xl text-sm ">Hybrid</p>
-            <p className="mt-1 max-w-2xl text-sm ">CBD</p>
+            <p className="mt-1 max-w-2xl text-xs ">Sativa</p>
+            <p className="mt-1 max-w-2xl text-xs ">Indica</p>
+            <p className="mt-1 max-w-2xl text-xs ">Hybrid</p>
+            <p className="mt-1 max-w-2xl text-xs ">CBD</p>
           </div>
         </div>
       </Link>
@@ -66,10 +70,10 @@ function Example() {
                 Concentrates
               </h2>
               <div className="flex gap-2">
-                <p className="mt-1 max-w-2xl text-sm ">Sativa</p>
-                <p className="mt-1 max-w-2xl text-sm ">Indica</p>
-                <p className="mt-1 max-w-2xl text-sm ">Hybrid</p>
-                <p className="mt-1 max-w-2xl text-sm ">CBD</p>
+                <p className="mt-1 max-w-2xl text-xs ">Sativa</p>
+                <p className="mt-1 max-w-2xl text-xs ">Indica</p>
+                <p className="mt-1 max-w-2xl text-xs ">Hybrid</p>
+                <p className="mt-1 max-w-2xl text-xs ">CBD</p>
               </div>
             </div>
           </Link>

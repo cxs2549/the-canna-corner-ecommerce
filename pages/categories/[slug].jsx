@@ -1,4 +1,4 @@
-import { useRouter } from "next/router"
+import { useEffect, useState } from "react"
 import commerce from "../../lib/commerce"
 import { useProductsState } from "../../context/products"
 import Card from "../../components/Categories/Card/Card"
@@ -31,13 +31,13 @@ const Categories = ({ category, Container }) => {
   const specificProducts = products?.filter(
     (obj) => obj.categories[0]?.slug === category.slug
   )
+
   return (
     <Container classes="flex flex-col dark:bg-surface dark:text-white">
       <div className="w-full">
         <h2 className="mb-8">
           {category.name} <span>({category.products})</span>
         </h2>
-        
       </div>
       <div className="w-full flex flex-wrap gap-2 text-sm py-2.5 mb-4">
         <Btn text="All" classes="bg-green-500 active text-sm">
@@ -45,12 +45,15 @@ const Categories = ({ category, Container }) => {
         </Btn>
         <Btn
           text="Trending in LA"
-          classes={`border text-slate-400 dark:border-slate-600  text-sm`}
+          classes={`border text-slate-300 dark:border-slate-600  text-sm`}
         >
           <p className="text-sm">Trending in LA</p>
         </Btn>
         {category.children.map((child, i) => (
-          <Btn classes={`border dark:border-slate-600 text-slate-400`} key={i}>
+          <Btn
+            classes={`border dark:border-slate-600 text-slate-300`}
+            key={i}
+          >
             <p className="text-sm">{child.name}</p>
           </Btn>
         ))}
